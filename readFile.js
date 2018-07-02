@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const file = 'input.txt';
-let arrayBoard = [];
  
 function fillContent(){
     let mowers = [];
@@ -32,17 +31,8 @@ function fillContent(){
     return [dimensionArray,mowers];
 }
 
-function createBoard(limitBoard){
-    const [posX,posY] = limitBoard.split(' ');
-    for (let x = 0; x <= posX ; x++){
-        for (let y = 0 ; y <= posY ; y++){
-            arrayBoard.push({x,y,isFilled:false});
-        }
-    }
-    return arrayBoard;
-}
+
 
 module.exports = {
     fillContent:fillContent,
-    createBoard: createBoard    
 }
